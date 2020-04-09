@@ -269,7 +269,7 @@ int see()
    }
 
    printf("입금액 : %d\n", deposit_money);
-   //입금날짜
+   
    switch(answer_acc)
    {
       case 1:printf("저축예금 이자율 : 약0.1%(1년에 4번 지급)\n"); break;
