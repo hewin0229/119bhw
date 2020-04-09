@@ -55,10 +55,10 @@ int menu()
 
 int new_acc()
 {
-   printf("\nÀÌ¸§ : ");
+   printf("\nì´ë¦„ : ");
    scanf("%s",name);
 
-   printf("\n»ı³â¿ùÀÏ\n");
+   printf("\nìƒë…„ì›”ì¼\n");
    printf("Year : ");
    scanf("%d",&year);
    printf("Month : ");
@@ -66,18 +66,18 @@ int new_acc()
     printf("Day : ");
     scanf("%d",&day);
 
-   printf("\n½Ã¹Î±Ç ¹øÈ£ : ");
+   printf("\nì‹œë¯¼ê¶Œ ë²ˆí˜¸ : ");
    scanf("%s",citizenship);
 
    fflush(stdin);
-   printf("\nÁÖ¼Ò : ");
+   printf("\nì£¼ì†Œ : ");
    scanf("%[^\n]s", address);
 
    fflush(stdin);
-   printf("\nÀüÈ­¹øÈ£ :");
+   printf("\nì „í™”ë²ˆí˜¸ :");
    scanf("%[^\n]s",phone_num);
 
-   printf("\nÀÔ±İ¾× : ");
+   printf("\nì…ê¸ˆì•¡ : ");
    scanf("%d",&deposit_money);
 
    printf("\n1. Saving account \n");
@@ -85,22 +85,22 @@ int new_acc()
    printf("3. Fixed for 1 year \n");
    printf("4. Fixed for 2 year \n");
    printf("5. Fixed for 3 year \n");
-   printf("\n¿¹±İ À¯Çü : ");
+   printf("\nì˜ˆê¸ˆ ìœ í˜• : ");
    scanf("%d",&answer_acc);
 
-   printf("\nÀÌ¸§ : %s \n", name);
-   printf("»ı³â¿ùÀÏ : %d³â %d¿ù %dÀÏ\n", year, month, day);
-   printf("½Ã¹Î±Ç ¹øÈ£ : %s\n", citizenship);
-   printf("ÁÖ¼Ò : %s\n", address);
-   printf("ÀüÈ­¹øÈ£ : %s\n", phone_num);
-   printf("ÀÔ±İ¾× : %d\n", deposit_money);
+   printf("\nì´ë¦„ : %s \n", name);
+   printf("ìƒë…„ì›”ì¼ : %dë…„ %dì›” %dì¼\n", year, month, day);
+   printf("ì‹œë¯¼ê¶Œ ë²ˆí˜¸ : %s\n", citizenship);
+   printf("ì£¼ì†Œ : %s\n", address);
+   printf("ì „í™”ë²ˆí˜¸ : %s\n", phone_num);
+   printf("ì…ê¸ˆì•¡ : %d\n", deposit_money);
       switch(answer_acc)
    {
-      case 1:printf("¿¹±İ À¯Çü : Saving account\n"); break;
-      case 2:printf("¿¹±İ À¯Çü : Current account\n"); break;
-      case 3:printf("¿¹±İ À¯Çü : Fixed for 1 year\n"); break;
-      case 4:printf("¿¹±İ À¯Çü : Fixed for 2 year\n"); break;
-      case 5:printf("¿¹±İ À¯Çü : Fixed for 3 year\n"); break;
+      case 1:printf("ì˜ˆê¸ˆ ìœ í˜• : Saving account\n"); break;
+      case 2:printf("ì˜ˆê¸ˆ ìœ í˜• : Current account\n"); break;
+      case 3:printf("ì˜ˆê¸ˆ ìœ í˜• : Fixed for 1 year\n"); break;
+      case 4:printf("ì˜ˆê¸ˆ ìœ í˜• : Fixed for 2 year\n"); break;
+      case 5:printf("ì˜ˆê¸ˆ ìœ í˜• : Fixed for 3 year\n"); break;
    }
 
    printf("\nyes / no : ");
@@ -111,9 +111,9 @@ int new_acc()
    if(strcmp(answer_acc_correct, "yes")==0)
    {
       set_num_ran();
-      printf("\nÈ¸¿ø¹øÈ£´Â ");
+      printf("\níšŒì›ë²ˆí˜¸ëŠ” ");
       set_num();
-     printf(" ÀÔ´Ï´Ù.\n\n");
+     printf(" ì…ë‹ˆë‹¤.\n\n");
 
       main();
    }
@@ -124,7 +124,7 @@ int set_num_ran()
    srand(time(NULL));
    for (i=0; i<4; i++)
    {
-      member_num[i]=rand()%9;
+      member_num[i]=rand()%10;
    }
 }
 
@@ -140,34 +140,34 @@ int set_num()
 
 int view_list()
 {
-   printf("\nÈ¸¿ø¹øÈ£ :");
+   printf("\níšŒì›ë²ˆí˜¸ :");
    set_num();
-   printf("\nÀÌ¸§ : %s",name);
-   printf("\nÁÖ¼Ò : %s",address);
-   printf("\nÀüÈ­¹øÈ£ : %s \n\n", phone_num);
+   printf("\nì´ë¦„ : %s",name);
+   printf("\nì£¼ì†Œ : %s",address);
+   printf("\nì „í™”ë²ˆí˜¸ : %s \n\n", phone_num);
    main();
 }
 
 int edit()
 {
-   printf("\n1. ÁÖ¼Ò º¯°æ 2. ÀüÈ­¹øÈ£ º¯°æ : ");
+   printf("\n1. ì£¼ì†Œ ë³€ê²½ 2. ì „í™”ë²ˆí˜¸ ë³€ê²½ : ");
    scanf("%d", &answer_edit);
 
    if(answer_edit==1)
    {
-      printf("\nÇöÀç ÁÖ¼Ò : %s\n", address);
+      printf("\ní˜„ì¬ ì£¼ì†Œ : %s\n", address);
 
       fflush(stdin);
-      printf("\nº¯°æÇÒ ÁÖ¼Ò : ");
+      printf("\në³€ê²½í•  ì£¼ì†Œ : ");
       scanf("%[^\n]s", address);
 
       main();
    }
    else if(answer_edit==2)
    {
-      printf("\nÇöÀç ÀüÈ­¹øÈ£ : %s\n", phone_num);
+      printf("\ní˜„ì¬ ì „í™”ë²ˆí˜¸ : %s\n", phone_num);
       fflush(stdin);
-      printf("\nº¯°æÇÒ ÀüÈ­¹øÈ£ : ");
+      printf("\në³€ê²½í•  ì „í™”ë²ˆí˜¸ : ");
       scanf("%[^\n]s", phone_num);
 
       main();
@@ -178,37 +178,37 @@ int edit()
 int transact()
 {
 
-   printf("\nÀÔ±İ/Ãâ±İ Áß °Å·¡ÇÒ ³»¿ëÀ» ¼±ÅÃÇÏ½Ã¿À: ");
+   printf("\nì…ê¸ˆ/ì¶œê¸ˆ ì¤‘ ê±°ë˜í•  ë‚´ìš©ì„ ì„ íƒí•˜ì‹œì˜¤: ");
    scanf("%s",&transaction);
-   if(strcmp(transaction, "ÀÔ±İ")==0)
+   if(strcmp(transaction, "ì…ê¸ˆ")==0)
    {
-      printf("\nÀÔ±İÇÒ ±İ¾×À» ÀÔ·ÂÇÏ½Ã¿À: ");
+      printf("\nì…ê¸ˆí•  ê¸ˆì•¡ì„ ì…ë ¥í•˜ì‹œì˜¤: ");
       scanf("%d",&deposit_money);
-      printf("\nÀÔ±İÇÒ °èÁÂ¸¦ ÀÔ·ÂÇÏ½Ã¿À: ");
+      printf("\nì…ê¸ˆí•  ê³„ì¢Œë¥¼ ì…ë ¥í•˜ì‹œì˜¤: ");
       scanf("%d",&deposit_account);
 
       if(deposit_money==190000)
-        printf("\n¡Ú¼¼»ó¿¡¼­ °¡Àå ½¬¿î ¼ıÀÚ ÀÔ±İ¡Ú\n");
+        printf("\nâ˜…ì„¸ìƒì—ì„œ ê°€ì¥ ì‰¬ìš´ ìˆ«ì ì…ê¸ˆâ˜…\n");
       else
-        printf("\nÀÔ±İµÇ¾ú½À´Ï´Ù \n");
+        printf("\nì…ê¸ˆë˜ì—ˆìŠµë‹ˆë‹¤ \n");
       deposit_sum+=deposit_money;
       if(deposit_account==withdrawal_account)
          deposit_sum-=withdrawal_money;
-      printf("\nÀÜ¾× : %d ¿ø\n\n",deposit_sum);
+      printf("\nì”ì•¡ : %d ì›\n\n",deposit_sum);
       main();
 
    }
-   else if(strcmp(transaction, "Ãâ±İ")==0)
+   else if(strcmp(transaction, "ì¶œê¸ˆ")==0)
    {
-      printf("\nÃâ±İÇÒ ±İ¾×À» ÀÔ·ÂÇÏ½Ã¿À: ");
+      printf("\nì¶œê¸ˆí•  ê¸ˆì•¡ì„ ì…ë ¥í•˜ì‹œì˜¤: ");
       scanf("%d",&withdrawal_money);
       deposit_sum=deposit_sum-withdrawal_money;
-      printf("\nÃâ±İÇÒ °èÁÂ¸¦ ÀÔ·ÂÇÏ½Ã¿À: ");
+      printf("\nì¶œê¸ˆí•  ê³„ì¢Œë¥¼ ì…ë ¥í•˜ì‹œì˜¤: ");
       scanf("%d",&withdrawal_account);
-      printf("\nÃâ±İµÇ¾ú½À´Ï´Ù");
+      printf("\nì¶œê¸ˆë˜ì—ˆìŠµë‹ˆë‹¤");
       if(deposit_account==withdrawal_account)
          withdrawal_money=deposit_sum-withdrawal_money;
-      printf("\n\nÀÜ¾× : %d ¿ø\n\n",deposit_sum);
+      printf("\n\nì”ì•¡ : %d ì›\n\n",deposit_sum);
       main();
    }
 }
@@ -218,14 +218,14 @@ int erase()
    char ch[4];
    char account[5]="0";
 
-   printf("\n°èÁ¤À» Á¤¸» »èÁ¦ÇÏ½Ã°Ú½À´Ï±î? (yes/no) :");
+   printf("\nê³„ì •ì„ ì •ë§ ì‚­ì œí•˜ì‹œê² ìŠµë‹ˆê¹Œ? (yes/no) :");
     scanf("%s",ch);
 
    int r=0;
     if(strcmp(ch,"yes")==0)
     {
 
-       printf("\n»èÁ¦ÇÒ °èÁ¤ÀÇ È¸¿ø¹øÈ£¸¦ ÀÔ·ÂÇÏ½Ã¿À : ");
+       printf("\nì‚­ì œí•  ê³„ì •ì˜ íšŒì›ë²ˆí˜¸ë¥¼ ì…ë ¥í•˜ì‹œì˜¤ : ");
 
        scanf("%s",account);
        for(i=0 ; i<4 ; i++)
@@ -235,50 +235,50 @@ int erase()
       }
       if(r==4)
       {
-         printf("\n\n»èÁ¦µÇ¾ú½À´Ï´Ù.\n\n");
+         printf("\n\nì‚­ì œë˜ì—ˆìŠµë‹ˆë‹¤.\n\n");
          for (i = 0; i < 4; i++) member_num[i]=0;
          main();
       }
        else
       {
-         printf("\nÁ¸ÀçÇÏÁö ¾Ê´Â È¸¿ø¹øÈ£ÀÔ´Ï´Ù.\n \n");
+         printf("\nì¡´ì¬í•˜ì§€ ì•ŠëŠ” íšŒì›ë²ˆí˜¸ì…ë‹ˆë‹¤.\n \n");
           main();
       }
    }
     else if(strcmp(ch,"no")==0)
     {
-        printf("\nÃ³À½ È­¸éÀ¸·Î µ¹¾Æ°¡±â \n\n");
+        printf("\nì²˜ìŒ í™”ë©´ìœ¼ë¡œ ëŒì•„ê°€ê¸° \n\n");
        main();
       }
 }
 
 int see()
 {
-   printf("°èÁÂ¹øÈ£ : %d \n", deposit_account);
-   printf("\nÀÌ¸§ : %s \n", name);
-   printf("»ı³â¿ùÀÏ : %d³â %d¿ù %dÀÏ \n",year, month, day);
-   printf("½Ã¹Î±Ç ¹øÈ£ : %s\n", citizenship);
-   printf("³ªÀÌ : %d¼¼\n", 2020-year+1);
-   printf("ÁÖ¼Ò : %s\n", address);
-   printf("ÀüÈ­¹øÈ£ : %s\n", phone_num);
+   printf("ê³„ì¢Œë²ˆí˜¸ : %d \n", deposit_account);
+   printf("\nì´ë¦„ : %s \n", name);
+   printf("ìƒë…„ì›”ì¼ : %dë…„ %dì›” %dì¼ \n",year, month, day);
+   printf("ì‹œë¯¼ê¶Œ ë²ˆí˜¸ : %s\n", citizenship);
+   printf("ë‚˜ì´ : %dì„¸\n", 2020-year+1);
+   printf("ì£¼ì†Œ : %s\n", address);
+   printf("ì „í™”ë²ˆí˜¸ : %s\n", phone_num);
    switch(answer_acc)
    {
-      case 1:printf("¿¹±İ À¯Çü : Saving account\n"); break;
-      case 2:printf("¿¹±İ À¯Çü : Current account\n"); break;
-      case 3:printf("¿¹±İ À¯Çü : Fixed for 1 year\n"); break;
-      case 4:printf("¿¹±İ À¯Çü : Fixed for 2 year\n"); break;
-      case 5:printf("¿¹±İ À¯Çü : Fixed for 3 year\n"); break;
+      case 1:printf("ì˜ˆê¸ˆ ìœ í˜• : Saving account\n"); break;
+      case 2:printf("ì˜ˆê¸ˆ ìœ í˜• : Current account\n"); break;
+      case 3:printf("ì˜ˆê¸ˆ ìœ í˜• : Fixed for 1 year\n"); break;
+      case 4:printf("ì˜ˆê¸ˆ ìœ í˜• : Fixed for 2 year\n"); break;
+      case 5:printf("ì˜ˆê¸ˆ ìœ í˜• : Fixed for 3 year\n"); break;
    }
 
-   printf("ÀÔ±İ¾× : %d\n", deposit_money);
-   //ÀÔ±İ³¯Â¥
+   printf("ì…ê¸ˆì•¡ : %d\n", deposit_money);
+   //ì…ê¸ˆë‚ ì§œ
    switch(answer_acc)
    {
-      case 1:printf("ÀúÃà¿¹±İ ÀÌÀÚÀ² : ¾à0.1%(1³â¿¡ 4¹ø Áö±Ş)\n"); break;
-      case 2:printf("´çÁÂ¿¹±İ ÀÌÀÚÀ² : 0%(ÀÌÀÚ¾øÀ½)\n"); break;
-      case 3:printf("1³â Á¤±â¿¹±İÀÇ ±İ¸®°¡ 2ÆÛ¼¾Æ®ÀÏ ¶§ ÀÌÀÚ : %.0f¿ø\n",(float)deposit_money*0.02); break;
-      case 4:printf("2³â Á¤±â¿¹±İÀÇ ±İ¸®°¡ 2ÆÛ¼¾Æ®ÀÏ ¶§ ÀÌÀÚ : %.0f¿ø\n",(float)deposit_money*0.02*2); break;
-      case 5:printf("3³â Á¤±â¿¹±İÀÇ ±İ¸®°¡ 2ÆÛ¼¾Æ®ÀÏ ¶§ ÀÌÀÚ : %.0f¿ø\n",(float)deposit_money*0.02*3); break;
+      case 1:printf("ì €ì¶•ì˜ˆê¸ˆ ì´ììœ¨ : ì•½0.1%(1ë…„ì— 4ë²ˆ ì§€ê¸‰)\n"); break;
+      case 2:printf("ë‹¹ì¢Œì˜ˆê¸ˆ ì´ììœ¨ : 0%(ì´ìì—†ìŒ)\n"); break;
+      case 3:printf("1ë…„ ì •ê¸°ì˜ˆê¸ˆì˜ ê¸ˆë¦¬ê°€ 2í¼ì„¼íŠ¸ì¼ ë•Œ ì´ì : %.0fì›\n",(float)deposit_money*0.02); break;
+      case 4:printf("2ë…„ ì •ê¸°ì˜ˆê¸ˆì˜ ê¸ˆë¦¬ê°€ 2í¼ì„¼íŠ¸ì¼ ë•Œ ì´ì : %.0fì›\n",(float)deposit_money*0.02*2); break;
+      case 5:printf("3ë…„ ì •ê¸°ì˜ˆê¸ˆì˜ ê¸ˆë¦¬ê°€ 2í¼ì„¼íŠ¸ì¼ ë•Œ ì´ì : %.0fì›\n",(float)deposit_money*0.02*3); break;
    }
 
    menu();
@@ -289,13 +289,13 @@ int modify()
 {
    if(strcmp("0",numb)==0)
    {
-      printf("\nÈ¸¿ø°¡ÀÔÀ» ÇØÁÖ¼¼¿ä.\n");
+      printf("\níšŒì›ê°€ì…ì„ í•´ì£¼ì„¸ìš”.\n");
       main();
    }
    else
    {
-      printf("\nÇöÀç È¸¿ø¹øÈ£ : %s", numb);
-      printf("\n»õ·Î¿î È¸¿ø¹øÈ£ :");
+      printf("\ní˜„ì¬ íšŒì›ë²ˆí˜¸ : %s", numb);
+      printf("\nìƒˆë¡œìš´ íšŒì›ë²ˆí˜¸ :");
       set_num_ran();
       set_num();
       main();
