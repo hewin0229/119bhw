@@ -15,18 +15,16 @@ int withdrawal_account, withdrawal_money, deposit_account;
 
 int main()
 {
-   menu();
+   menu();  // 메뉴
 
-   if(answer_menu==1) new_acc();
-   if(answer_menu==2) view_list();
-   if(answer_menu==3) edit();
-   if(answer_menu==4) transact();
-   if(answer_menu==5) erase();
-   if(answer_menu==6) see();
-   if(answer_menu==7) modify();
-   if(answer_menu==8)
-
-   return 0;
+   if(answer_menu==1) new_acc();    // 새로운 계정 생성
+   if(answer_menu==2) view_list();  // 입력된 정보 나열
+   if(answer_menu==3) edit();       // 주소, 전화번호 변경
+   if(answer_menu==4) transact();   // 입/출금
+   if(answer_menu==5) erase();      // 계정 삭제
+   if(answer_menu==6) see();        // 참고 내용
+   if(answer_menu==7) modify();     // 회원번호 변경(이스터에그)
+   if(answer_menu==8) return 0;     // 종료
 
 }
 
